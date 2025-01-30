@@ -4,7 +4,7 @@ const axios = require('axios')
 
 newsRouter.get('', async(req, res) => {
     try {
-        const newsAPI = await axios.get(`https://newsapi.org/v2/top-headlines?q=hurricane&q=Atlanta&apiKey=62b15376e43a4120bef86be143305846`)
+        const newsAPI = await axios.get(`https://newsapi.org/v2/top-headlines?q=hurricane&q=Atlanta&apiKey=`)
         res.render('news', { articles : newsAPI.data.articles })
     } catch (err) {
         if(err.response) {
